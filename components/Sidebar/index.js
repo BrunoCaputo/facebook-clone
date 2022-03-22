@@ -16,12 +16,10 @@ export function Sidebar() {
   const { data: session, status } = useSession();
   const loading = status === "loading";
 
-  console.log(session, loading);
-
   return (
     <div className="p-2 mt-5 max-w-[600px] xl:min-w-[300px]">
       {/* Session user data */}
-      <SidebarRow Icon={session.user.image} title={session.user.name} />
+      <SidebarRow src={session.user.image} title={session.user.name} />
 
       <SidebarRow Icon={UsersIcon} title="Friends" />
       <SidebarRow Icon={UserGroupIcon} title="Groups" />
