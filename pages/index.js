@@ -2,6 +2,7 @@ import Head from "next/head";
 import { Header } from "../components/Header";
 import { getSession } from "next-auth/react";
 import { Login } from "../components/Login";
+import { Sidebar } from "../components/Sidebar";
 
 export default function Home({ session }) {
   if (!session) {
@@ -17,7 +18,8 @@ export default function Home({ session }) {
       <Header />
 
       <main>
-        {/* Sidebar */}
+        <Sidebar />
+
         {/* Feed */}
         {/* Widgets */}
       </main>
