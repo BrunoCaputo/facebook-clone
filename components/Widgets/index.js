@@ -1,5 +1,6 @@
 import { SearchIcon } from "@heroicons/react/outline";
 import { DotsHorizontalIcon, VideoCameraIcon } from "@heroicons/react/solid";
+import { Contact } from "../Contact";
 import { CONTACTS } from "./constants/contacts-data";
 
 export function Widgets() {
@@ -17,7 +18,7 @@ export function Widgets() {
       </div>
 
       {contacts.map((contact) => (
-        <Contact />
+        <Contact key={contact.src} src={contact.src} name={contact.name} />
       ))}
     </div>
   );
